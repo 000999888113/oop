@@ -101,7 +101,7 @@ public class LoadSave {
 	}
 	//arraylist to 2darray
 	public static int[][] GetLevelData(String name) {
-		File lvlFile = new File("res/"+name+".txt");
+		File lvlFile = new File("C:/Users/ViewG/eclipse-workspace/Game/res/" +name+".txt");
 		if(lvlFile.exists()) {
 			ArrayList<Integer> list =  ReadFromFile(lvlFile);
 			return Utilz.ArrayListTo2D(list, 20, 20);
