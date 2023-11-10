@@ -366,9 +366,7 @@ public class Play extends GameScene implements SceneMethods{
 	        	
 	        		  if (level[i][j] == 2 || level[i][j] == 1) {
 	  	                int type = level[i][j];
-	  	            	if (	i > 0 
-	  	                		&& level[i - 1][j] != 4 
-	  	                	    && updatedGrid[i - 1][j] != 2) {
+	  	            	if (	i > 0 && level[i - 1][j] != 4 ) {
 	  	            		for(int k =0;k<BOXX.size();k++) {
 	  	            			if(i-1 == BOXX.get(k).ty && j == BOXX.get(k).tx) {
 	  	            				fluid =false ;
@@ -399,9 +397,7 @@ public class Play extends GameScene implements SceneMethods{
 	  	            	
 	  	            		}
 	  	                }
-	  	                if (	i < numRows - 1 
-	  	                		&& level[i + 1][j] != 4 
-	  	                	    && updatedGrid[i + 1][j] != 2) {
+	  	                if (	i < numRows - 1 && level[i + 1][j] != 4 ) {
 	  	                	for(int k =0;k<BOXX.size();k++) {
 	  	            			if(i+1 == BOXX.get(k).ty && j == BOXX.get(k).tx) {
 	  	            				fluid =false ;
@@ -431,9 +427,7 @@ public class Play extends GameScene implements SceneMethods{
 		  	                	
 	  	                	}
 	  	                }
-	  	                if (	j > 0 
-	  	                		&& level[i][j - 1] != 4 
-	  	                	    && updatedGrid[i][j - 1] != 2) {
+	  	                if (	j > 0 && level[i][j - 1] != 4  ) {
 	  	                	
 	  	                	for(int k =0;k<BOXX.size();k++) {
 	  	            			if(i == BOXX.get(k).ty && j -1 == BOXX.get(k).tx) {
@@ -462,9 +456,7 @@ public class Play extends GameScene implements SceneMethods{
 	  	                	}
 	  	                
 	  	                }
-	  	                if (	j < numCols - 1 
-	  	                		&& level[i][j + 1] != 4 
-	  	                		&& updatedGrid[i][j + 1] != 2) {
+	  	                if (	j < numCols - 1 && level[i][j + 1] != 4 ) {
 	  	                	for(int k =0;k<BOXX.size();k++) {
 	  	            			if(i == BOXX.get(k).ty && j + 1 == BOXX.get(k).tx) {
 	  	            				fluid =false ;
